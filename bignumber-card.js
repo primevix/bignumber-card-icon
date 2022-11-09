@@ -112,7 +112,8 @@ class BigNumberCard extends HTMLElement {
     const entityState = config.attribute 
       ? hass.states[config.entity].attributes[config.attribute] 
       : hass.states[config.entity].state;
-    const measurement = hass.states[config.entity].attributes.unit_of_measurement || "";
+    const measurement = hass.states[config.entity].attributes.unit_of_measurement || "";    
+    const showIcon = hass.states[config.entity].attributes.icon || "";
 
     if (entityState !== this._entityState) {
       if (config.min !== undefined && config.max !== undefined) {
@@ -125,7 +126,7 @@ class BigNumberCard extends HTMLElement {
       if (config.hideunit==true) 
         { root.getElementById("value").textContent = `${value}`; }
       else 
-        { root.getElementById("value").innerHTML = `${value}<small>${measurement}</small>`; }
+        { root.getElementById("value").innerHTML = `${showIcon}${value}<small>${measurement}</small>`; }
       if (this.isNoneConfig){
         if (isNaN(value)) {
           if (config.noneString) {
@@ -151,13 +152,13 @@ class BigNumberCard extends HTMLElement {
   }
 }
 
-customElements.define('bignumber-card', BigNumberCard);
+customElements.define('bignumber-card-icon', BigNumberCard);
 
 // Configure the preview in the Lovelace card picker
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: 'bignumber-card',
-  name: 'Big number card',
+  type: 'bignumber-card-icon',
+  name: 'Big number card icon',
   preview: false,
   description: 'A simple card to display big numbers for sensors. It also supports severity levels as background.'
 });
