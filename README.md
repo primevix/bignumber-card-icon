@@ -1,4 +1,4 @@
-# Big number card 
+# Big number card icon
 
 A simple card to display big numbers for sensors. It also supports severity levels as background.
 
