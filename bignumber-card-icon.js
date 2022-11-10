@@ -53,6 +53,7 @@ class BigNumberCardIcon extends HTMLElement {
       #title {
         font-size: calc(var(--base-unit) * 0.5);
         line-height: calc(var(--base-unit) * 0.5);
+        padding-top: calc(var(--base-unit) * 0.2);
         color: var(--bignumber-color);
       }`;
     
