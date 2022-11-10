@@ -129,7 +129,7 @@ class BigNumberCardIcon extends HTMLElement {
         if (config.showicon==true)
           { root.getElementById("value").innerHTML = `<ha-icon .icon=${entityIcon}></ha-icon> ${value}<small>${measurement}</small>`; }
         else
-          { root.getElementById("value").innerHTML = `${value}<small>${measurement}</small>`; }
+          { root.getElementById("value").innerHTML = `${measurement} ${value}<small>${measurement}</small>`; }
       if (this.isNoneConfig){
         if (isNaN(value)) {
           if (config.noneString) {
