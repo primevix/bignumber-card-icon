@@ -45,17 +45,17 @@ class BigNumberCardIcon extends HTMLElement {
         line-height: calc(var(--base-unit) * 1.3);
         color: var(--bignumber-color);
       }
-      #value small{opacity: ${cardConfig.opacity}}
+      #value small{opacity: ${cardConfig.opacity}}      
+      #value ha-icon {
+        font-size: calc(var(--base-unit) * 1.3);
+        margin-left: 10px;
+      }      
       #title {
         font-size: calc(var(--base-unit) * 0.5);
         line-height: calc(var(--base-unit) * 0.5);
         color: var(--bignumber-color);
-      }
-      .icon {
-        margin-left: 10px;
-        color: var(--bignumber-color);
-      }
-    `;
+      }`;
+    
     card.appendChild(content);
     card.appendChild(title);
     card.appendChild(style);
