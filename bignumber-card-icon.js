@@ -37,7 +37,7 @@ class BigNumberCardIcon extends HTMLElement {
         --bignumber-percent: 100%;
         --bignumber-direction: ${cardConfig.from};
         --base-unit: ${cardConfig.scale};
-        padding: calc(var(--base-unit)*0.6) calc(var(--base-unit)*0.3);
+        padding: calc(var(--base-unit)*0.4) calc(var(--base-unit)*0.3);
         background: linear-gradient(to var(--bignumber-direction), var(--card-background-color) var(--bignumber-percent), var(--bignumber-fill-color) var(--bignumber-percent));
       }
       #value {
