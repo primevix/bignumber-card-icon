@@ -48,7 +48,7 @@ class BigNumberCardIcon extends HTMLElement {
       #value small{opacity: ${cardConfig.opacity}}      
       #value ha-icon {
         font-size: calc(var(--base-unit) * 1.3);
-        margin-left: 10px;
+        --mdc-icon-size: calc(var(--base-unit) * 1.3);
       }      
       #title {
         font-size: calc(var(--base-unit) * 0.5);
