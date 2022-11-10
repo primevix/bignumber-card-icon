@@ -113,7 +113,7 @@ class BigNumberCardIcon extends HTMLElement {
       ? hass.states[config.entity].attributes[config.attribute] 
       : hass.states[config.entity].state;
     const measurement = hass.states[config.entity].attributes.unit_of_measurement || "";    
-    const showIcon = hass.states[config.entity].attributes.icon || "";
+    const entityIcon = hass.states[config.entity].attributes.icon || "";
 
     if (entityState !== this._entityState) {
       if (config.min !== undefined && config.max !== undefined) {
@@ -127,7 +127,7 @@ class BigNumberCardIcon extends HTMLElement {
         { root.getElementById("value").textContent = `${value}`; }
       else 
         if (config.showicon==true)
-          { root.getElementById("value").innerHTML = `${showIcon}${value}<small>${measurement}</small>`; }
+          { root.getElementById("value").innerHTML = `${entityIcon} ${value}<small>${measurement}</small>`; }
         else
           { root.getElementById("value").innerHTML = `${value}<small>${measurement}</small>`; }
       if (this.isNoneConfig){
